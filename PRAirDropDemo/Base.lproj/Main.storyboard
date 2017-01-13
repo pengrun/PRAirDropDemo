@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDi-q7-8Sh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="VsP-vA-4QD">
+            <objects>
+                <navigationController id="PDi-q7-8Sh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="908-Nb-Npm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Os-Tv-dhg" kind="relationship" relationship="rootViewController" id="9mp-Ez-TEt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaV-Al-Gq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742" y="15"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HCX-Eu-hkA">
+            <objects>
+                <viewController id="3Os-Tv-dhg" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j2p-z5-gHS"/>
+                        <viewControllerLayoutGuide type="bottom" id="8SY-Fz-lFV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Pv-qY-iwq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gl-XQ-Qd6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ypb-mT-qQg">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypb-mT-qQg" id="8M0-1v-haj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Os-Tv-dhg" id="2HM-Ja-n5Q"/>
+                                    <outlet property="delegate" destination="3Os-Tv-dhg" id="aZg-hh-qpX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1gl-XQ-Qd6" firstAttribute="top" secondItem="j2p-z5-gHS" secondAttribute="bottom" id="5jX-Et-mC4"/>
+                            <constraint firstItem="1gl-XQ-Qd6" firstAttribute="leading" secondItem="2Pv-qY-iwq" secondAttribute="leading" id="D9P-iL-RPg"/>
+                            <constraint firstItem="8SY-Fz-lFV" firstAttribute="top" secondItem="1gl-XQ-Qd6" secondAttribute="bottom" id="lEK-sY-wMF"/>
+                            <constraint firstAttribute="trailing" secondItem="1gl-XQ-Qd6" secondAttribute="trailing" id="oZZ-EW-2Gw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gry-aV-QUL">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Zce-3C-o2m">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aI5-sU-hUL">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="读取"/>
+                                <connections>
+                                    <action selector="load:" destination="3Os-Tv-dhg" eventType="touchUpInside" id="NHM-GP-Hc5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="95U-5W-h0a">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aQo-ek-Mee">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="分享"/>
+                                <connections>
+                                    <action selector="share:" destination="3Os-Tv-dhg" eventType="touchUpInside" id="1SQ-AY-SAC"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="1gl-XQ-Qd6" id="HQu-cn-JjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HI8-Lf-QSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="14.842578710644679"/>
+        </scene>
+    </scenes>
+</document>
