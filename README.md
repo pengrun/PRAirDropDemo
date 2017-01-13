@@ -261,4 +261,4 @@ NSString *path1 = [[NSBundle mainBundle] pathForResource:@"blog" ofType:@"prdata
 
 ### 博客
 
-如果需要源码的请点击点击[[Blog](http://www.mrpeng.me)
+欢迎大家指出问题，希望来我的博客做客[Blog](http://www.mrpeng.me)
